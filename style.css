@@ -4,14 +4,12 @@
     font-family: "portoluce";
     src: url(fontes/portoluce/Portoluce\ Regular.ttf) format("truetype");
     font-weight: 400;
-    font-style: normal;
 }
 
 @font-face {
     font-family: "portoluce";
     src: url(fontes/portoluce/Portoluce\ Bold.ttf) format("truetype");
     font-weight: 700;
-    font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -19,6 +17,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -30,12 +29,12 @@ header{
     font-family: "portoluce", sans-serif;
     background-color: palevioletred;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     color: white;
 }
 
 header h1 {
-    font-size: 20vh;
+    font-size: clamp(2rem, 8vw, 5rem);
     font-weight: bold;
 }
 
@@ -52,12 +51,11 @@ a:hover {
 main {
     font-style: italic;
     background-color: rgba(255, 182, 193, 0.719);
-    text-align: left;
     color: white;
 }
 
 main p{
-    font-size: 5vh;
+    font-size: clamp(1rem, 4vw, 1.8rem);
     line-height: 1.5em;
     padding-left: 30px;
     padding-top: 40px;
@@ -81,6 +79,7 @@ main p{
     padding: 15px;
     margin-left: 30px;
     margin-right: 30px;
+    font-size: clamp(1rem, 4vw, 1.6rem);
 }
 
 #foto1 {
@@ -96,4 +95,19 @@ footer {
     text-align: center;
     padding: 5px;
     color: white;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    .fotos {
+        padding: 80px 10px;
+    }
+
+    main p {
+        padding: 25px 15px;
+    }
 }
